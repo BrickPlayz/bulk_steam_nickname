@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Bulk Steam Nickname",
+  "version": "1.0.1",
+  "description": "Bulk nickname Steam friends directly from the Steam website.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://steamcommunity.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://steamcommunity.com/*/friends*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "css": [
+        "steam-nickname.css"
+      ]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bulk-steam-nickname@brickplayz.dev",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": [],
+        "has_previous_consent": false
+      }
+    }
+  }
+}

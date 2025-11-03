@@ -1,0 +1,85 @@
+
+/* steam-nickname.css */
+#bsn_popupButton {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #568203;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100000;
+    transition: background-color 0.2s;
+}
+#bsn_popupButton:hover { background-color: #6ca104; }
+
+#bsn_popupContainer {
+    position: fixed;
+    top: 110px;
+    right: 20px;
+    background-color: #171a21;
+    padding: 20px;
+    border: 1px solid #3b4751;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    z-index: 100000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: 600px;
+}
+#bsn_titleText { margin-bottom: 10px; color: #fff; font-size: 16px; }
+#bsn_subtitleText { margin: 0 0 5px 0; color: #fff; width: 375px; font-size: 12px; }
+#bsn_prefixContainer { display:flex; align-items:center; margin-bottom:10px; justify-content:space-between; width:100%; }
+#bsn_prefixLabel { color:#fff; margin-right:5px; }
+#bsn_prefixInput { width:60%; box-sizing:border-box; color:#c6d4df; background-color:#2a475e; border:none; padding:5px; border-radius:3px; }
+
+#bsn_table { border-collapse: collapse; width:100%; max-width:600px; max-height:300px; overflow-y:auto; display:block; background-color:#1b2838; color:#c6d4df; border:none; }
+#bsn_table th { border-bottom:1px solid #3b4751; padding:8px; background-color:#2a475e; color:#fff; position:sticky; top:0; z-index:1; text-align:left; }
+#bsn_table td { border-bottom:1px solid #3b4751; padding:8px; }
+#bsn_rowNumCell { padding:8px; border-bottom:1px solid #3b4751; }
+.bsn_rowInput { width:100%; box-sizing:border-box; color:#c6d4df; background-color:#171a21; border:none; padding:5px; border-radius:3px; }
+.bsn_rowInput:focus { outline:1px solid #568203; }
+.bsn_rowInput.invalid { outline:none; border:2px solid #e74c3c; }
+
+.bsn_button { padding:5px 10px; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:background-color 0.2s; }
+.bsn_green_button { background-color:#568203; }
+.bsn_blue_button { background-color:#2a475e; }
+.bsn_green_button:hover { background-color:#6ca104; }
+.bsn_blue_button:hover { background-color:#3a5f7d; }
+#bsn_removeUserButton { background-color:#2a475e; color:#fff; border:none; border-radius:5px; cursor:pointer; display:block; transition:background-color 0.2s; }
+#bsn_removeUserButton:hover { background-color:#c0392b; }
+#bsn_addRowButton { margin:10px auto 0 auto; padding:3px 10px; }
+
+#bsn_errorMessageContainer { color:#e74c3c; text-align:center; margin:10px 0; width:100%; max-width:375px; min-height:20px; }
+#bsn_csvInputContainer { display:flex; align-items:flex-end; width:100%; margin:10px 0; }
+#bsn_csvInputArea { flex-grow:1; margin-right:10px; padding:5px; background-color:#2a475e; color:#c6d4df; border:1px solid #3b4751; border-radius:3px; resize:vertical; }
+
+#bsn_bottomButtonContainer { display:flex; justify-content:space-between; width:100%; margin-top:10px; }
+#bsn_statusContainer { font-size:14px; text-align:center; }
+.bsn_spinner { display:inline-block; width:12px; height:12px; border:2px solid #c6d4df; border-radius:50%; border-top-color:transparent; animation:bsn-spin 750ms linear infinite; }
+@keyframes bsn-spin { to { transform: rotate(360deg); } }
+
+#bsn_cleanupResultsContainer {
+  background-color: #1b2838;
+  border: 1px solid #3b4751;
+  color: #c6d4df;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 100%;
+  margin: 8px 0;
+  white-space: pre-line;
+}
+
+#bsn_cleanupResultsContainer::before {
+  content: "🔁 Unnickname Cleanup Results:";
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
